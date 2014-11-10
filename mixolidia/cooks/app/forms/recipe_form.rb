@@ -1,2 +1,2 @@
-class RecipeForm
+class RecipeController < ActionController::Base
 end
