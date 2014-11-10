@@ -7,8 +7,7 @@ Rails.application.routes.draw do
 
   get   '/recipes/new', to: 'recipes#new',    as: :new
   post  '/recipes',     to: 'recipes#create', as: :recipes
-
-
+  get   '/recipes/:id',  to: 'recipes#show',  as: :recipe
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

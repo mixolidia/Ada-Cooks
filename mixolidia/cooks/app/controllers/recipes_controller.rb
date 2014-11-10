@@ -11,11 +11,14 @@ class RecipesController < ApplicationController
           Ingredient.create name: i
         end
       if @recipe.save
-        redirect_to recipe_path
+        redirect_to recipe_path(@recipe.id)
       else
-        raise "why"
         render :new
       end
+  end
+
+  def show
+    @recipe = Recipe.find(params[:id])
   end
 
   def edit
